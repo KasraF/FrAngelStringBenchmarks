@@ -1,0 +1,150 @@
+Starting synthesis...
+
+=== remove_char ===
+Successes: 8 / 10
+Min time: 0.001 seconds
+Max time: 5.700 seconds
+Avg time: 0.720 seconds
+Avg program size: 12.625
+Programs:
+
+static String remove_char(String s) {
+    int i1 = 0;
+    for (i1 = 0; s.regionMatches(true, i1, s, i1, 2); i1++) {
+    }
+    return s.substring(1, i1);
+}
+
+static String remove_char(String s) {
+    int var1 = 0;
+    for (int i1 = 0; i1 < s.length(); i1++) {
+        var1 = i1;
+    }
+    return s.substring(1, var1);
+}
+
+static String remove_char(String s) {
+    int i1 = 0;
+    for (i1 = 0; s.regionMatches(true, i1, s, i1, 2); i1++) {
+    }
+    s = s.substring(1, i1);
+    return s;
+}
+
+
+=== dna_to_rna ===
+Successes: 10 / 10
+Min time: 0.000 seconds
+Max time: 0.036 seconds
+Avg time: 0.004 seconds
+Avg program size: 4.700
+Programs:
+
+static String dna_to_rna(String dna) {
+    return dna.replace('T', 'U');
+}
+
+static String dna_to_rna(String dna) {
+    String var1 = "";
+    var1 = dna.replace('T', 'U');
+    dna = var1;
+    return dna;
+}
+
+
+=== abbreviate ===
+Successes: 5 / 10
+Min time: 0.013 seconds
+Max time: 2.300 seconds
+Avg time: 0.506 seconds
+Avg program size: 24.000
+Programs:
+
+static String abbreviate(String name) {
+    String var1 = "";
+    for (int i1 = 0; i1 < ('.' + name).indexOf(" "); i1++) {
+        var1 = var1 + ' ';
+    }
+    return name.charAt(0) + "." + name.charAt(var1.length());
+}
+
+static String abbreviate(String name) {
+    String var1 = "";
+    for (int i1 = 0; i1 < ('.' + name).indexOf(" "); i1++) {
+        var1 = var1 + '.';
+    }
+    return name.charAt(0) + "." + name.charAt(var1.length());
+}
+
+static String abbreviate(String name) {
+    String var1 = "";
+    for (int i1 = 0; i1 - 1 < name.indexOf(" "); i1++) {
+        var1 = var1 + ' ';
+    }
+    return name.charAt(0) + "." + name.charAt(var1.length());
+}
+
+
+=== number_to_string ===
+Successes: 10 / 10
+Min time: 0.000 seconds
+Max time: 0.000 seconds
+Avg time: 0.000 seconds
+Avg program size: 2.000
+Programs:
+
+static String number_to_string(int num) {
+    return String.valueOf(num);
+}
+
+
+=== string_to_number ===
+All 10 attempts failed.
+
+=== reverse_string ===
+Successes: 5 / 10
+Min time: 0.002 seconds
+Max time: 6.689 seconds
+Avg time: 1.348 seconds
+Avg program size: 15.800
+Programs:
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; i1 < s.length(); i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; i1 - s.getBytes().length < 0; i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+
+=== reverse_words ===
+All 10 attempts failed.
+
+=== bonus_time ===
+Successes: 10 / 10
+Min time: 0.002 seconds
+Max time: 14.329 seconds
+Avg time: 1.441 seconds
+Avg program size: 13.000
+Programs:
+
+static String bonus_time(int salary, boolean bonus) {
+    String var1 = "";
+    if (bonus) {
+        var1 = String.valueOf(0);
+    }
+    return '$' + String.valueOf(salary) + var1;
+}
+
+
+=== fake_bin ===
+All 10 attempts failed.
