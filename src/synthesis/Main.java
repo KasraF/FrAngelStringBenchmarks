@@ -1,12 +1,16 @@
 package synthesis;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import frangel.*;
+import frangel.Example;
+import frangel.FrAngel;
+import frangel.FrAngelResult;
+import frangel.SynthesisTask;
 import frangel.utils.Utils;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -14,25 +18,50 @@ public class Main {
 	{
 		System.out.println("Starting synthesis...");
 		Main.tasks.forEach(task -> {
-			System.out.printf("\n === %s ===\n", task.getName());
-			FrAngel synth = new FrAngel(task);
+			System.out.printf("\n=== %s ===\n", task.getName());
 
 			// Prevent FrAngel prints
 			PrintStream out = System.out;
 			System.setOut(null);
-			FrAngelResult result = synth.run(Utils.getTimeout(30));
+
+			final FrAngel synth = new FrAngel(task);
+
+			double      min      = Double.MAX_VALUE;
+			double      max      = Double.MIN_VALUE;
+			double      avg      = 0;
+			int         success  = 0;
+			int         avg_size = 0;
+			Set<String> programs = new HashSet<>();
+
+			for (int i = 0; i < 10; i++) {
+				FrAngelResult result = synth.run(Utils.getTimeout(15));
+
+				if (result.isSuccess()) {
+					double time = result.getTime();
+					success++;
+					avg += time;
+					avg_size += result.getProgramSize();
+					programs.add(result.getProgram());
+					if (time > max) max = time;
+					if (time < min) min = time;
+				}
+			}
+
 			System.setOut(out);
 
-			if (result.isSuccess()) {
-				System.out.printf("Successful (time: %.3f second) (program size: %d):\n",
-						result.getTime(),
-						result.getProgramSize());
-				System.out.println(result.getProgram());
+			if (success > 0) {
+				System.out.printf("Successes: %d / 10\n" +
+								"Min time: %.3f seconds\n" +
+								"Max time: %.3f seconds\n" +
+								"Avg time: %.3f seconds\n" +
+								"Avg program size: %.3f\n" +
+								"Programs:\n\n",
+						success, min, max, avg / success, (float) avg_size / success);
+				programs.forEach(p -> System.out.printf("%s\n\n", p));
 			} else {
-				System.out.println("Failed");
+				System.out.println("All 10 attempts failed.");
 			}
 		});
-		System.out.println("=============================================================");
 	}
 
 	private static List<SynthesisTask> tasks;
