@@ -1,9 +1,6 @@
 package synthesis;
 
-import frangel.Example;
-import frangel.FrAngel;
-import frangel.FrAngelResult;
-import frangel.SynthesisTask;
+import frangel.*;
 import frangel.utils.Utils;
 
 import java.io.PrintStream;
@@ -17,6 +14,8 @@ public class Main {
 	public static void main(String[] args)
 	{
 		System.out.println("Starting synthesis...");
+		Settings.VERBOSE = 0;
+
 		Main.tasks.forEach(task -> {
 			System.out.printf("\n=== %s ===\n", task.getName());
 
