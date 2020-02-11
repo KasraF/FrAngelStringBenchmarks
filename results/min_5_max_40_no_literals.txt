@@ -1,0 +1,112 @@
+Starting synthesis...
+
+=== remove_char ===
+Successes: 10 / 10
+Min time: 0.001 seconds
+Max time: 5.848 seconds
+Avg time: 0.621 seconds
+Avg program size: 16.900
+Programs:
+
+static String remove_char(String s) {
+    String var1 = "";
+    for (int i1 = 0; s.regionMatches(true, i1, s, i1, 2); i1++) {
+        var1 = new String(s.getBytes(), 1, i1);
+    }
+    return var1;
+}
+
+static String remove_char(String s) {
+    String var1 = "";
+    for (int i1 = 0; s.regionMatches(i1, s, i1, 2); i1++) {
+        var1 = new String(s.getBytes(), 1, i1);
+    }
+    return var1;
+}
+
+
+=== dna_to_rna ===
+All 10 attempts failed.
+
+=== abbreviate ===
+All 10 attempts failed.
+
+=== number_to_string ===
+Successes: 10 / 10
+Min time: 0.000 seconds
+Max time: 0.009 seconds
+Avg time: 0.001 seconds
+Avg program size: 2.400
+Programs:
+
+static String number_to_string(int num) {
+    return String.valueOf(num);
+}
+
+static String number_to_string(int num) {
+    String var1 = "";
+    var1 = String.valueOf(num);
+    return var1;
+}
+
+
+=== string_to_number ===
+All 10 attempts failed.
+
+=== reverse_string ===
+Successes: 9 / 10
+Min time: 0.000 seconds
+Max time: 14.676 seconds
+Avg time: 1.636 seconds
+Avg program size: 15.000
+Programs:
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; s.regionMatches(true, i1, s, i1, 1); i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; i1 < s.toCharArray().length; i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; i1 < s.compareTo(""); i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; i1 < s.length(); i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+static String reverse_string(String s) {
+    String var1 = "";
+    for (int i1 = 0; s.regionMatches(i1, s, i1, 1); i1++) {
+        var1 = s.charAt(i1) + var1;
+    }
+    return var1;
+}
+
+
+=== reverse_words ===
+All 10 attempts failed.
+
+=== bonus_time ===
+All 10 attempts failed.
+
+=== fake_bin ===
+All 10 attempts failed.
