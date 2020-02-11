@@ -76,8 +76,7 @@ public class Main {
 				.setInputNames("s")
 				.setOutputType(String.class);
 		task.addExamples(
-				new Example().setInputs(() -> new Object[] {"Hello world!"}).setOutput("ello world"),
-				new Example().setInputs(() -> new Object[] {"Kasra Ferdowsifard"}).setOutput("asra Ferdowsifar")
+				new Example().setInputs(() -> new Object[] {"Hello world!"}).setOutput("ello world")
 		);
 		task.addLiterals(String.class, " ");
 		task.addLiterals(char.class, ' ');
@@ -121,7 +120,7 @@ public class Main {
 		// Number to String
 		task = new SynthesisTask()
 				.setName("number_to_string")
-				.setInputTypes(int.class)
+				.setInputTypes(Integer.class)
 				.setInputNames("num")
 				.setOutputType(String.class);
 		task.addExamples(
@@ -135,7 +134,7 @@ public class Main {
 				.setName("string_to_number")
 				.setInputTypes(String.class)
 				.setInputNames("num")
-				.setOutputType(int.class);
+				.setOutputType(Integer.class);
 		task.addExamples(
 				new Example().setInputs(() -> new Object[] {"1234"}).setOutput(1234),
 				new Example().setInputs(() -> new Object[] {"605"}).setOutput(605),
@@ -208,6 +207,7 @@ public class Main {
 		);
 		task.addLiterals(String.class, "1", "0");
 		task.addLiterals(char.class, '1', '0');
+		task.addLiterals(int.class, 5, 4, 6);
 		task.makeInputsImmutable();
 		tasks.add(task);
 
