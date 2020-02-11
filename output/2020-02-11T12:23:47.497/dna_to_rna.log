@@ -1,0 +1,17 @@
+=== dna_to_rna ===
+Successes: 10 / 10
+Min time: 0.000 seconds
+Max time: 0.214 seconds
+Avg time: 0.022 seconds
+Avg program size: 4.300
+Programs:
+
+static String dna_to_rna(String dna) {
+    dna = dna.replace('T', 'U');
+    return dna;
+}
+
+static String dna_to_rna(String dna) {
+    return dna.replace('T', 'U');
+}
+

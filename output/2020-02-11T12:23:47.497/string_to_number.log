@@ -1,0 +1,16 @@
+=== string_to_number ===
+Successes: 10 / 10
+Min time: 0.000 seconds
+Max time: 0.002 seconds
+Avg time: 0.000 seconds
+Avg program size: 2.000
+Programs:
+
+static Integer string_to_number(String num) {
+    return new Integer(num);
+}
+
+static Integer string_to_number(String num) {
+    return Integer.decode(num);
+}
+

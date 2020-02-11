@@ -1,0 +1,21 @@
+=== phone_dir_name ===
+Successes: 5 / 10
+Min time: 0.000 seconds
+Max time: 5.005 seconds
+Avg time: 1.002 seconds
+Avg program size: 12.400
+Programs:
+
+static String phone_dir_name(String s) {
+    String var1 = "";
+    var1 = s.substring(1);
+    return var1.split(">", 0)[0];
+}
+
+static String phone_dir_name(String s) {
+    String var1 = "";
+    var1 = s.substring(1);
+    var1 = var1.split(">")[0];
+    return var1;
+}
+

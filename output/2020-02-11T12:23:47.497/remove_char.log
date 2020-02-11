@@ -1,0 +1,31 @@
+=== remove_char ===
+Successes: 10 / 10
+Min time: 0.001 seconds
+Max time: 4.088 seconds
+Avg time: 0.485 seconds
+Avg program size: 13.800
+Programs:
+
+static String remove_char(String s) {
+    String var1 = "";
+    for (int i1 = 0; s.regionMatches(true, i1, s, i1, 2); i1++) {
+        var1 = String.valueOf(s.toCharArray(), 1, i1);
+    }
+    return var1;
+}
+
+static String remove_char(String s) {
+    int var1 = 0;
+    for (int i1 = 0; s.regionMatches(true, 2, s, 2, i1); i1++) {
+        var1 = i1;
+    }
+    return new String(s.toCharArray(), 1, var1);
+}
+
+static String remove_char(String s) {
+    int i1 = 0;
+    for (i1 = 0; !s.startsWith(" ", i1 / 2); i1++) {
+    }
+    return String.valueOf(s.toCharArray(), 1, i1);
+}
+

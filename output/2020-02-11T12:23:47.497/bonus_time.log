@@ -1,0 +1,26 @@
+=== bonus_time ===
+Successes: 10 / 10
+Min time: 0.022 seconds
+Max time: 14.184 seconds
+Avg time: 1.522 seconds
+Avg program size: 17.200
+Programs:
+
+static String bonus_time(int salary, boolean bonus) {
+    String var1 = "";
+    var1 = "$" + String.valueOf(salary);
+    if (bonus) {
+        var1 = var1 + String.valueOf(0);
+    }
+    return var1;
+}
+
+static String bonus_time(int salary, boolean bonus) {
+    String var1 = "";
+    var1 = "$" + String.valueOf(salary) + String.valueOf(0);
+    if (!bonus) {
+        var1 = "$" + String.valueOf(salary);
+    }
+    return var1;
+}
+

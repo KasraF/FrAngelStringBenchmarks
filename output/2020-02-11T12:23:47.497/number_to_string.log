@@ -1,0 +1,12 @@
+=== number_to_string ===
+Successes: 10 / 10
+Min time: 0.000 seconds
+Max time: 0.018 seconds
+Avg time: 0.002 seconds
+Avg program size: 3.000
+Programs:
+
+static String number_to_string(Integer num) {
+    return String.valueOf(num.longValue());
+}
+

@@ -1,0 +1,96 @@
+=== get_middle ===
+Successes: 8 / 10
+Min time: 0.204 seconds
+Max time: 14.226 seconds
+Avg time: 3.681 seconds
+Avg program size: 36.375
+Programs:
+
+static String get_middle(String s) {
+    if (s.toCharArray()[s.length() / 2] == s.charAt(0)) {
+        s = s.substring(0, 1);
+    }
+    if (1 < s.length()) {
+        s = new String(s.getBytes(), s.length() / (1 + 2), 2);
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    if (2 < (-1 - "".compareToIgnoreCase(s)) / 2) {
+        s = s.substring(0, 1);
+    }
+    if (1 < s.length()) {
+        s = String.valueOf(s.toCharArray(), s.length() / (1 + 2), 2);
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    if (0 < s.length() % 2) {
+        s = s.substring(0, 1);
+    }
+    if (2 <= s.length()) {
+        s = String.valueOf(s.toCharArray(), s.length() / (1 + 2), 2);
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    if (s.toCharArray()[s.compareTo("") / 2] == s.charAt(0)) {
+        s = s.substring(0, 1);
+    }
+    if (1 < s.length()) {
+        s = String.valueOf(s.toCharArray(), s.compareTo("") / (1 + 2), 2);
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    if (s.startsWith(s, s.length() % 2)) {
+        s = String.valueOf(s.toCharArray(), s.length() / (1 + 2), 2);
+    }
+    if (2 < s.length()) {
+        s = s.substring(0, 1);
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    if (s.length() % 2 == 1) {
+        s = s.substring(0, 1);
+    }
+    for (int i1 = 0; 2 < s.length(); i1++) {
+        if (s.endsWith(s.substring(i1, 1))) {
+            s = new String(s.getBytes(), i1 + 1, 2);
+        }
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    for (int i1 = 0; s.startsWith("", i1); i1++) {
+        if (0 < s.lastIndexOf(s.substring(0, 1))) {
+            if (2 < s.getBytes().length / 2) {
+                s = s.substring(0, 1);
+            }
+        }
+        if (2 < i1) {
+            s = String.valueOf(s.toCharArray(), s.compareTo("") / i1, 2);
+        }
+    }
+    return s;
+}
+
+static String get_middle(String s) {
+    if (0 < s.lastIndexOf(s.substring(0, 1))) {
+        if (2 < s.length() / 2) {
+            s = s.substring(0, 1);
+        }
+    }
+    if (1 < s.length()) {
+        s = String.valueOf(s.toCharArray(), s.compareTo("") / (1 + 2), 2);
+    }
+    return s;
+}
+
