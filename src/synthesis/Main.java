@@ -100,7 +100,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {"Hello world!"}).setOutput("ello world")
 		);
 		task.addLiterals(String.class, " ");
-		task.addLiterals(char.class, ' ');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -116,7 +115,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {"GACCGCCGCC"}).setOutput("GACCGCCGCC")
 		);
 		task.addLiterals(String.class, "T", "U");
-		task.addLiterals(char.class, 'T', 'U');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -134,7 +132,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {"David Mendieta"}).setOutput("D.M")
 		);
 		task.addLiterals(String.class, ".", " ");
-		task.addLiterals(char.class, '.', ' ');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -209,7 +206,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {67890, true}).setOutput("$678900")
 				);
 		task.addLiterals(String.class, "$");
-		task.addLiterals(char.class, '$');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -274,6 +270,7 @@ public class Main {
 		task.addExamples(
 				new Example().setInputs(() -> new Object[] {"4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"}).setOutput("542 -214")
 		);
+		task.addLiterals(String.class, " ");
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -318,7 +315,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {"(( @"}).setOutput("))((")
 		);
 		task.addLiterals(String.class, "(", ")");
-		task.addLiterals(char.class, '(', ')');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -334,7 +330,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {""}).setOutput("")
 		);
 		task.addLiterals(String.class, " ");
-		task.addLiterals(char.class, ' ');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -403,7 +398,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {"<P Salinger> Main Street, +1-098-512-2222, Denver\n"}).setOutput("1-098-512-2222")
 		);
 		task.addLiterals(String.class, "+", " ");
-		task.addLiterals(char.class, '+', ' ');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
@@ -436,7 +430,6 @@ public class Main {
 				new Example().setInputs(() -> new Object[] {5, "abc def"}).setOutput("bcd efa")
 		);
 		task.addLiterals(String.class, " ");
-		task.addLiterals(char.class, ' ');
 		task.makeInputsImmutable();
 		tasks.add(task);
 
